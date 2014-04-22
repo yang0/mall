@@ -1,0 +1,118 @@
+<a class="menu-toggler" id="menu-toggler" href="#">
+	<span class="menu-text"></span>
+</a>
+
+<div class="sidebar" id="sidebar">
+		{% if user.is_superuser %}
+		<ul class="nav nav-list">
+			<li>
+				<a href="#" class="dropdown-toggle">
+					<i class="icon-list"></i>
+					<span class="menu-text"> 商品管理 </span>
+
+					<b class="arrow icon-angle-down"></b>
+				</a>
+				<ul class="submenu" style="display: block;">
+					<li >
+						<a href="#" class="dropdown-toggle">
+							<i class="icon-double-angle-right"></i>
+							动态属性
+						</a>
+
+						<ul class="submenu" style="display: block;">
+
+
+							<li>
+								<a href="#" class="dropdown-toggle">
+									<i class="icon-pencil"></i>
+									可选项分组
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="dropdown-toggle">
+									<i class="icon-pencil"></i>
+									可选项
+								</a>
+							</li>
+
+							<li>
+								<a href="#">
+									<i class="icon-leaf"></i>
+									动态属性定义
+								</a>
+							</li>
+
+
+						</ul>
+					</li>
+					<li >
+						<a href="#" class="dropdown-toggle">
+							<i class="icon-double-angle-right"></i>
+							商品分类
+						</a>
+
+						<ul class="submenu" style="display: block;">
+
+
+							<li>
+								<a href="#" class="dropdown-toggle">
+									<i class="icon-pencil"></i>
+									商品分类
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="dropdown-toggle">
+									<i class="icon-pencil"></i>
+									绑定动态属性
+								</a>
+							</li>
+
+
+						</ul>
+					</li>
+					<li >
+						<a href="#" class="dropdown-toggle">
+							<i class="icon-double-angle-right"></i>
+							商品
+
+						</a>
+
+						<ul class="submenu" style="display: block;">
+
+
+							<li>
+								<a href="#" class="dropdown-toggle">
+									<i class="icon-pencil"></i>
+									品牌
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="dropdown-toggle">
+									<i class="icon-pencil"></i>
+									商品
+								</a>
+							</li>
+
+
+						</ul>
+					</li>
+
+				</ul>
+			</li>
+
+
+
+
+			
+
+			
+		</ul><!--/.nav-list-->
+		<div class="sidebar-collapse" id="sidebar-collapse">
+		<i class="icon-double-angle-left"></i>
+		</div>
+		{% endif %}
+</div>
+

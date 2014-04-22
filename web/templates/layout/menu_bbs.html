@@ -1,0 +1,47 @@
+<a class="menu-toggler" id="menu-toggler" href="#">
+	<span class="menu-text"></span>
+</a>
+
+<div class="sidebar" id="sidebar">
+		<ul class="nav nav-list">
+			<li class="active">
+				<a href="#">
+					<i class="icon-dashboard"></i>
+					<span class="menu-text" style="font-weight:bold;"> 用户社区 </span>
+				</a>
+			</li>
+			<li id="bbs_1" class="">
+				<a href="{% url 'bbs_index' 1 %}">
+					<i class="icon-comments-alt"></i>
+					<span class="menu-text"> 云雀360</span>
+				</a>
+			</li>
+
+
+
+			
+		</ul><!--/.nav-list-->
+		<div class="sidebar-collapse" id="sidebar-collapse">
+		<i class="icon-double-angle-left"></i>
+		</div>
+</div>
+
+{% if user.is_authenticated  %}
+<script>
+// $.post("{% url 'bbs_my_bbs' %}",{"csrfmiddlewaretoken":"{{ csrf_token }}"},function(data){
+// 	if(data.status){
+// 		var url="{% url 'bbs_index' 0 %}";
+// 		url=url.substr(0,(url.length-1));
+// 		var bbs=data.bbs;
+// 		var addHtml="";
+// 		for (var i=0;i<bbs.length;i++){
+// 			addHtml+='<li id=bbs_'+bbs[i].id+'><a href="'+url+bbs[i].id+'"><i class="icon-comments"></i><span class="menu-text">'+bbs[i].name+'</span></a></li>';
+// 		}
+// 		if(addHtml!=""){
+// 			$("#bbs_1").after(addHtml);
+// 		}
+// 		$("#bbs_{{group.id}}").addClass("active")
+// 	}
+// },"json");
+</script>
+{% endif %}

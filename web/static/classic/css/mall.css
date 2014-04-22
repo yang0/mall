@@ -1,0 +1,399 @@
+li{list-style: none outside none;}
+.mw1000{min-width:1000px;}
+.w1000{width:1000px;margin:0 auto;}
+.w960{width:960px;margin:0 auto;}
+
+.width-5 {
+    width:5% !important;
+}
+.width-8 {
+    width:8% !important;
+}
+.width-10{
+    width:10% !important;
+}
+.width-15{
+    width:15% !important;
+}
+.width-25{
+    width:25% !important;
+}
+.pt5{
+    padding-top:5px;
+}
+.pt10{
+    padding-top:10px;
+}
+
+.header-home{
+    background-color:#2684C2;
+    height: 61px;
+    position:relative;
+}
+.header-home .logo{
+    padding:15px 0;
+}
+.header-home a{
+    color:#fff;
+    font-size: 16px;
+}
+.header-home .logo_area:hover{
+    text-decoration: none;
+}
+.header-home .tip{
+    font-size:20px;
+    position: relative;
+    top: 8px;
+}
+.header-nav{
+    margin-top:20px;
+}
+.header-nav a{
+    color: #FFFFFF;
+    font-size: 16px;
+}
+.header-nav a:hover{
+    text-decoration: none;
+}
+.header-nav li.user a:hover{
+    text-decoration: underline;
+}
+.header-nav li{
+    border-left: 1px dashed #93C2E1;
+    float: left;
+    height: 18px;
+    line-height: 18px;
+    margin: 0 0 0 -1px;
+    padding: 0 30px;
+}
+.header-nav li.first{
+    border-left-width: 0;
+}
+.header-user{
+    padding:0 20px;
+    color:#ffffff;
+    font-size:28px;
+    margin-top:25px;
+}
+.header-user li{
+    float: left;
+    margin:0 20px;
+}
+.header-user li a{
+    color:#fff;
+}
+.footer-home{
+    margin: 40px 0 66px;
+    padding: 25px 0;
+    position: relative;
+    z-index: 3;
+}
+.footer-home .copyright{
+    color: #CDCDCD;
+    font-family: arial;
+}
+.footer-home .qq{
+   margin-right: 20px;
+}
+
+.banner{
+    height: 388px;
+    margin-bottom: 30px;
+    background:none repeat scroll 0 0 #2684C2;
+    overflow: hidden;
+    width: 100%;
+}
+
+.banner .carousel-indicators{
+    top:350px;
+    right: 470px;
+}
+.banner .carousel-indicators li{
+    height: 15px;
+    width: 15px;
+    border-radius: 9px;
+    margin-left: 10px;
+}
+
+.login-area{
+    background: none repeat scroll 0 0 #FFFFFF;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.13), 0 1px 5px rgba(0, 0, 0, 0.36), 0 0 0 1px rgba(255, 255, 255, 0.69) inset;
+    height: 336px;
+    position: absolute;
+    right: 0;
+    top: 14px;
+    width: 288px;
+    z-index: 1;
+}
+.login-area h1 {
+    color: #1E71A8;
+    font: 20px/75px "Microsoft Yahei","微软雅黑",SimSun,sans-serif;
+    height: 66px;
+    margin-left: 30px;
+    width: 227px;
+}
+.login-box{
+    height: 245px;
+    left: 0;
+    padding-left: 23px;
+    position: absolute;
+    top: 45px;
+    width: 265px;
+    z-index: 1;
+}
+.login-box dl{
+    margin-top: 33px;
+}
+.login-box .input-bg, .login-box .input-bg-focus {
+    display: block;
+    position: relative;
+}
+.login-item label{
+    display: none;
+}
+.login-box .tipinput, .login-box .tipinput1 {
+    border: 1px solid #C7C7C7;
+    font-size: 16px;
+    height: 34px;
+    margin-bottom: 10px;
+    padding: 7px;
+    width: 212px;
+    z-index: 20;
+}
+.login-area .find {
+    position: absolute;
+    top: 125px;
+    width: 230px;
+}
+.login-area .find a{
+    float: right;
+}
+
+.login-area .submit {
+    clear: both;
+    padding-top: 20px;
+}
+.login-area .submit input,.login-area .submit a {
+    background-color: #67C53C;
+    border: 0 none;
+    margin-top: 8px;
+}
+.login-area .submit input,.login-area .submit a{
+    background: url(../images/login_btn.png) no-repeat;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 18px;
+    height: 45px;
+    line-height: 42px;
+    width: 228px;
+}
+.login-area .submit a{
+    display: inline-block;
+    text-align: center;
+    background-position:-292px 0; 
+}
+.login-area .submit input:hover{
+    background-position: 0 -69px;
+}
+.login-area .submit a:hover{
+    background-position: -292px -69px;
+    text-decoration: none;
+}
+.login-area .change {
+    background-color: #F2F7FA;
+    border-top: 1px solid #E6ECF0;
+    bottom: 0;
+    height: 40px;
+    left: 0;
+    line-height: 40px;
+    position: absolute;
+    width: 100%;
+}
+.login-area .change a {
+    margin-left: 30px;
+}
+.login-box .login-tip{
+    font-size: 14px;
+    padding-top: 40px;
+    border-top: 1px dashed #C7C7C7;
+    width: 227px;
+    margin:0 0 20px 10px; 
+}
+.download-list{
+    padding: 50px 0 0;
+}
+.download-list .item {
+    border-bottom: 1px solid #D9D9D9;
+    font-family: "Microsoft YaHei";
+    height: 430px;
+    padding: 80px 0 0;
+    position: relative;
+    z-index: 1;
+}
+.download-list .item.first{
+    padding-right:496px;
+    padding-top: 10px;
+}
+.download-list .title {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+.download-list .desc {
+    color: #6F6F6F;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 72px;
+}
+.download-list .info {
+    color: #959595;
+    font-size: 14px;
+    line-height: 30px;
+    margin: 0 0 12px;
+}
+.download-list .info li {
+    float: left;
+    height: 30px;
+    overflow: hidden;
+    width: 50%;
+}
+.download-list .action, .download-list .btn {
+    vertical-align: bottom;
+}
+.download-list .btn-download {
+    background: none repeat scroll 0 0 #67BC3C;
+    border-radius: 2px;
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 24px;
+    height: auto;
+    line-height: 32px;
+    margin: 0 6px 0 0;
+    padding: 14px 26px;
+}
+.download-list .btn-download:hover{
+    text-decoration: none;
+    background: none repeat scroll 0 0 #52AD30;
+}
+.download-list .item .figure {
+    height: 430px;
+    overflow: hidden;
+    position: absolute;
+    top: 80px;
+    width: 473px;
+    z-index: 2;
+}
+.download-list .item.first .figure{
+    right: 36px;
+}
+
+.register_area{
+    height:75px;
+    margin:130px 0 0 197px;
+}
+.register_btn{
+    display: inline-block;
+    width:204px;
+    height: 75px;
+    background: url(../images/register_btn.png) no-repeat;
+    text-indent: 250px;
+    line-height: 75px;
+    overflow: hidden;
+}
+.register_btn:hover{
+    background-position:-205px 0; 
+}
+
+.soft-download li{
+    float: left;
+    text-align: center;
+    width: 160px;
+}
+.soft-download li:first-child{
+    margin-left: 356px;
+}
+.soft-download a {
+    color: #000000;
+    float: left;
+    font-family: "Microsoft YaHei";
+    font-size: 16px;
+    padding: 13px 0;
+    vertical-align: middle;
+    width: 100%;
+}
+.soft-download .pc i {
+    background-position: 0 3px;
+}
+.soft-download a i, .soft-download a span {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+}
+.soft-download i {
+    background: url(../images/icon_index.png) no-repeat;
+    width: 33px;
+    height: 33px;
+}
+.soft-download .pc:hover{
+    background-color: #1994D4;
+    color:#FFFFFF;
+}
+.soft-download .pc:hover i{
+    background-position:-29px 3px; 
+}
+
+
+.broad{
+    height:410px;
+    padding:15px 0  20px 0;
+    background-color: #f7f7f7;
+}
+.broad-area{
+    width:1000px;
+    margin:0 auto;
+}
+.broad-univ,.broad-bbs{
+    height: 400px;
+    width:450px;
+    text-align: center;
+}
+.broad-univ{
+    margin-right: 45px;
+}
+.broad-univ .addr,.broad-bbs .bbs{
+    color:#747474;
+    font-size: 28px;
+    line-height: 40px;
+    text-align: left;
+}
+.broad-univ .title,.broad-bbs .title{
+    height: 32px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    color:#2a2a2a;
+}
+.broad-univ .addr,.broad-bbs .bbs{
+    padding:20px;
+    height: 315px;
+    background: url(../images/c_bg.jpg) no-repeat bottom left;
+}
+.broad-bbs .bbs ul li{
+    height:40px;
+    line-height: 40px;
+    overflow: hidden;
+}
+
+.btn-site{
+    border-radius: 4px;
+}
+
+.css-form input.ng-invalid.ng-dirty {
+    background-color: #FA787E;
+}
+
+
+.table-site{
+    background: #438eb9;
+    border-color: #438eb9;
+}

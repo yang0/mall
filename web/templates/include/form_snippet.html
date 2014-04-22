@@ -1,0 +1,45 @@
+{% load my_filter %}
+
+{% csrf_token %}
+
+{% for field in form %}
+	{% if field.field.widget|klass == "HiddenInput" %}
+			<input type="hidden" name="{{field.name}}" id="{{field.name}}" value="{{field.value|default:""}}">
+	{% else %}
+																
+
+<div class="form-group">
+	<label  class="col-xs-12 col-sm-3 control-label no-padding-right">
+		{%  if field.field.required == True %}*{% endif %}{{field.label}}
+	</label>
+
+	<div class="col-xs-12 col-sm-5">
+		<span class="block input-icon input-icon-right">
+
+
+			{{field}}
+			{%if field.errors%} <i class="icon-remove-sign"></i> {%endif%}
+
+
+
+
+		</span>
+	</div>
+	<div class="help-block col-xs-12 col-sm-reset inline">
+		{% if field.errors %}
+			 {% for error in field.errors %}
+			 	{{ error }}
+			 {% endfor %} 
+		{% else %}
+			{{ field.help_text }}
+		{% endif %}
+	</div>
+</div>
+
+
+
+
+
+	{% endif %}
+
+{% endfor %}

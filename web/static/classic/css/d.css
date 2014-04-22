@@ -1,0 +1,266 @@
+div.profilePic {
+    position: relative;
+    text-align: center;
+}
+
+.userProfilePic {
+    max-width: 100%;
+    text-align: center;
+}
+
+
+div.profilePic a.editProfilePicLink {
+    display: none;
+}
+div.profilePic:hover a.editProfilePicLink, a.editProfilePicLink.stayOn {
+    background-color: rgba(116, 188, 60, 0.9);
+    bottom: 3px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block !important;
+    font-size: 13px;
+    font-weight: bold;
+    left: 0;
+    padding: 4px 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+}
+.profilePic + .sidebar-in{
+    margin-top: 10px;
+}
+#aboutMeName {
+    position: relative;
+}
+#aboutMeName h1 {
+    display: inline;
+}
+#aboutMeName .large-header.top{
+    margin-top: -4px;
+}
+.viewPublicProfile {
+    float: right;
+    padding-top: 4px;
+}
+div.proAggregateRating {
+    margin: 8px 0;
+}
+.viewPublicProfile a {
+    color: #3D8901;
+}
+.tabbedContentDiv {
+    display: none;
+    overflow: hidden;
+}
+
+.inventoryItem, .inventoryItemLast {
+    background-color: #FF0000;
+    display: inline-block;
+    margin-bottom: 8px;
+    margin-left: 1%;
+    vertical-align: top;
+    width: 32%;
+}
+.inventoryItem a,.inventoryItemLast a{
+    color:#333333;
+}
+.polaroidItem {
+    background-color: #FFFFFF;
+    border: 1px solid #DEDDDB;
+    float: left;
+    overflow: hidden;
+    width: 100%;
+}
+.polaroidItem .spaceBoxes {
+    width: 100% !important;
+}
+.spaceBoxes {
+    float: left;
+    position: relative;
+    width: 100%;
+}
+.spaceBoxFirstColumn {
+    margin-left: 0;
+}
+.spaceBox6 {
+    float: left;
+    width: 75%;
+}
+.reloadMe {
+    overflow: visible;
+}
+.reloadMe.rimg img.reloadable {
+    height: auto;
+    width: 100%;
+}
+.spaceBox5 {
+    float: right;
+    margin-bottom: 4px;
+    width: 23%;
+}
+.polaroidDesc {
+    clear: both;
+    overflow: hidden;
+    padding: 8px 6px;
+}
+.polaroidDesc .gallery-title {
+    color: #6D6D6D;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25;
+    overflow: hidden;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.polaroidDesc .gallery-meta, .polaroidDesc .project-meta {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.spaceBox2 {
+    float: left;
+    margin-left: 4px;
+    width: 65%;
+}
+.spaceBoxFirstColumn {
+    margin-left: 0;
+}
+.spaceBox4 {
+    float: right;
+    margin-bottom: 6px;
+    width: 33%;
+}
+
+.spaceBoxLastRow {
+    margin-bottom: 0;
+}
+.spaceBox3.spaceBoxFirstColumn {
+    float: left;
+}
+.spaceBox3 {
+    float: right;
+    width: 49%;
+}
+.spaceBox1 {
+    float: left;
+    margin-left: 4px;
+    width: 100%;
+}
+.spaceBoxFirstColumn {
+    margin-left: 0;
+}
+#gallerySpaces.allItemsWrapper {
+    padding: 0;
+}
+#gallerySpaces {
+    clear: both;
+    margin: 0 auto;
+}
+.allItemsWrapper {
+    clear: both;
+}
+.gallery-thumb-container {
+    margin-right: 2.3%;
+}
+.gallery-thumb-container {
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-right: 2.2%;
+    position: relative;
+    vertical-align: top;
+    width: 23%;
+}
+
+#addPhotoToIdeabook {
+    background-color: #FFFFFF;
+}
+.gallery-thumb-container .viewGalleryItemThumbnailImage {
+    font-size: 0;
+    margin-bottom: 10px;
+    position: relative;
+}
+#gallerySpaces .gallery-thumb-container:nth-child(4n) {
+    margin-right: 0;
+}
+.gallery-thumb-text a{
+    color:#333333;
+}
+.small-text{
+    font-size: 13px;
+}
+.nav-design {
+    border-bottom: 1px solid #DDDDDD;
+    margin-left:0;
+}
+
+.nav-design > li {
+    margin-bottom: -1px;
+    line-height: 20px;
+}
+.nav-design > li {
+    float: left;
+}
+.nav-design > li > a{
+    line-height: 14px;
+    margin-right: 2px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.nav-design > li > a {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #F7F7F7;
+    border-color: #DDDDDD;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 1px 0;
+    color: #555555;
+    cursor: pointer;
+
+    line-height: 20px;
+    margin-right: -1px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.nav-design > .active > a, .nav-design > .active > a:hover, .nav-design > .active > a:focus {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #FFFFFF;
+    background-image: linear-gradient(to bottom, #FFFFFF, #FFFFFF);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #DDDDDD rgba(0, 0, 0, 0);
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    color: #555555;
+    cursor: default;
+}
+
+#inventoryContentPane.tabsContentPane {
+    border-bottom: 0 none;
+    padding: 10px 0 2px;
+}
+.tabsContentPane {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-color: -moz-use-text-color #D6D6D6 #D6D6D6;
+    border-image: none;
+    border-right: 1px solid #D6D6D6;
+    border-style: none solid solid;
+    border-width: 0 1px 1px;
+    min-height: 254px;
+    padding: 10px;
+}
+

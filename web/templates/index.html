@@ -1,0 +1,32 @@
+{% extends "layout/base_home_form.html" %}
+
+
+{% block formHeader %}
+添加新商品
+{% endblock%}
+
+{%block wizard%}
+	<div id="fuelux-wizard" class="row-fluid" data-target="#step-container">
+		<ul class="wizard-steps">
+			<li data-target="#step1" class="complete">
+				<span class="step">1</span>
+				<span class="title">Validation states</span>
+			</li>
+
+			<li data-target="#step2" class="complete">
+				<span class="step">2</span>
+				<span class="title">Alerts</span>
+			</li>
+
+			<li data-target="#step3" class="active">
+				<span class="step">3</span>
+				<span class="title">Payment Info</span>
+			</li>
+
+			<li data-target="#step4" class="">
+				<span class="step">4</span>
+				<span class="title">Other Info</span>
+			</li>
+		</ul>
+	</div>
+{% endblock %}

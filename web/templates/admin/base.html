@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+{% load admin_static %}
+<html lang="en"><head>
+        <meta charset="utf-8">
+        <title>麻雀网</title>
+
+        <meta name="description" content="overview &amp; stats">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- basic styles -->
+
+        <link href="{{STATIC_URL}}assets/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{STATIC_URL}}assets/css/font-awesome.min.css">
+
+        <!--[if IE 7]>
+          <link rel="stylesheet" href="{{STATIC_URL}}assets/css/font-awesome-ie7.min.css" />
+        <![endif]-->
+
+        <!-- page specific plugin styles -->
+
+        <!-- fonts -->
+
+        <link rel="stylesheet" href="{{STATIC_URL}}css/font-css.css" type="text/css" />
+
+        <!-- ace styles -->
+
+        <link rel="stylesheet" href="{{STATIC_URL}}assets/css/ace.min.css">
+        <link rel="stylesheet" href="{{STATIC_URL}}assets/css/ace-rtl.min.css">
+        <link rel="stylesheet" href="{{STATIC_URL}}assets/css/ace-skins.min.css">
+        <link rel="stylesheet" href="{{STATIC_URL}}css/maqmall.css" type="text/css" />
+
+        <!--[if lte IE 8]>
+          <link rel="stylesheet" href="{{STATIC_URL}}assets/css/ace-ie.min.css" />
+        <![endif]-->
+
+        <!-- inline styles related to this page -->
+
+        <!-- ace settings handler -->
+
+        <script src="{{STATIC_URL}}assets/js/ace-extra.min.js"></script>
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+        <!--[if lt IE 9]>
+        <script src="{{STATIC_URL}}assets/js/html5shiv.js"></script>
+        <script src="{{STATIC_URL}}assets/js/respond.min.js"></script>
+        <![endif]-->
+    <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style>
+
+    <link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "admin/css/base.css" %}{% endblock %}" />
+{% block extrastyle %}{% endblock %}
+<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="{% block stylesheet_ie %}{% static "admin/css/ie.css" %}{% endblock %}" /><![endif]-->
+{% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{% static "admin/css/rtl.css" %}{% endblock %}" />{% endif %}
+<script type="text/javascript">window.__admin_media_prefix__ = "{% filter escapejs %}{% static "admin/" %}{% endfilter %}";</script>
+{% block extrahead %}{% endblock %}
+{% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE" />{% endblock %}
+
+
+</head>
+
+
+
+
+    <body style="">
+        {% block header %}{% include "layout/header.html" %}{% endblock %}
+
+        <div class="main-container" id="main-container">
+            <script type="text/javascript">
+                try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+            </script>
+
+            <div class="main-container-inner">
+               {% include "layout/menu.html" %}
+
+                <div class="main-content">
+                    <div class="breadcrumbs" id="breadcrumbs">
+                        <script type="text/javascript">
+                            try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+                        </script>
+
+                        <ul class="breadcrumb">
+                            <li>
+                                <i class="icon-home home-icon"></i>
+                                <a href="/admin/">管理中心</a>
+                            </li>
+                            {% block breadcrumbs %}
+                            <li class="active">
+                                {% if title %} {{ title }}{% endif %}
+                            </li>
+                            {% endblock %}
+                        </ul><!-- .breadcrumb -->
+
+
+                    </div>
+
+                    <div class="page-content">
+                        {% block messages %}
+                        {% if messages %}
+                        <div class="row">
+                            <div class="alert alert-block alert-success">
+                                    <button type="button" class="close" data-dismiss="alert">
+                                        <i class="icon-remove"></i>
+                                    </button>
+
+                                    <i class="icon-ok green"></i>
+
+                                    {% for message in messages %}
+                                        [ {{ message }} ]
+                                    {% endfor %}
+                                        
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endblock messages %}
+
+
+                        <div class="page-header">
+                            <h1>
+                                {% if title %}{{ title }}{% endif %}
+
+                                <span class="pull-right inline">
+                                {% block object-tools %}{% endblock %}
+                                </span>
+                            </h1>
+
+                            
+                            
+                            
+                        </div><!-- /.page-header -->
+
+
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <!-- PAGE CONTENT BEGINS -->
+
+                                <div class="row">
+                                    {% block content %}
+                                    {% endblock %}
+
+
+                                </div>
+
+
+
+
+
+                                <div class="hr hr32 hr-dotted"></div>
+
+
+                                <!-- PAGE CONTENT ENDS -->
+                            </div><!-- /.col -->
+                        </div><!-- /.row -->
+                    </div><!-- /.page-content -->
+                </div><!-- /.main-content -->
+
+
+            </div><!-- /.main-container-inner -->
+
+            <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+                <i class="icon-double-angle-up icon-only bigger-110"></i>
+            </a>
+        </div><!-- /.main-container -->
+
+        <!-- basic scripts -->
+
+        <!--[if !IE]> -->
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+        <!-- <![endif]-->
+
+        <!--[if IE]>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<![endif]-->
+
+        <!--[if !IE]> -->
+
+        <script type="text/javascript">
+            window.jQuery || document.write("<script src='{{STATIC_URL}}assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+        </script>
+
+        <!-- <![endif]-->
+
+        <!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='{{STATIC_URL}}/assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+        <script type="text/javascript">
+            if("ontouchend" in document) document.write("<script src='{{STATIC_URL}}assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+        </script>
+        <script src="{{STATIC_URL}}assets/js/bootstrap.min.js"></script>
+        <script src="{{STATIC_URL}}assets/js/typeahead-bs2.min.js"></script>
+
+        <!-- page specific plugin scripts -->
+
+        <!--[if lte IE 8]>
+          <script src="{{STATIC_URL}}assets/js/excanvas.min.js"></script>
+        <![endif]-->
+
+        <script src="{{STATIC_URL}}assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="{{STATIC_URL}}assets/js/jquery.ui.touch-punch.min.js"></script>
+        <script src="{{STATIC_URL}}assets/js/jquery.slimscroll.min.js"></script>
+        <script src="{{STATIC_URL}}assets/js/jquery.easy-pie-chart.min.js"></script>
+        <script src="{{STATIC_URL}}assets/js/jquery.sparkline.min.js"></script>
+        <script src="{{STATIC_URL}}assets/js/flot/jquery.flot.min.js"></script>
+        <script src="{{STATIC_URL}}assets/js/flot/jquery.flot.pie.min.js"></script>
+        <script src="{{STATIC_URL}}assets/js/flot/jquery.flot.resize.min.js"></script>
+
+        <!-- ace scripts -->
+
+        <script src="{{STATIC_URL}}assets/js/ace-elements.min.js"></script>
+        <script src="{{STATIC_URL}}assets/js/ace.min.js"></script>
+
+        <!-- inline scripts related to this page -->
+
+
+    
+
+<div class="tooltip top in" style="display: none;"><div class="tooltip-inner"></div></div></body></html>

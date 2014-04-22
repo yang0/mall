@@ -1,0 +1,86 @@
+{% extends "layout/base_home_form.html" %}
+
+{% block formHeader %}
+添加新商品
+<span ></span>
+{% endblock %}
+
+
+
+
+{% block form %}
+
+
+
+<form class="form-horizontal" id="sample-form" action="" method="post" enctype="multipart/form-data">
+
+<div class="widget-body">
+	<div class="widget-main">
+		<div class="step-content row-fluid position-relative" id="step-container" >
+			<div>
+				* 选择商品分类：
+				<select ng-model="productItem.product_category" ng-options="c.name for c in categories" 
+				ng-change="changeCategory()"></select>
+			</div>
+		</div>
+		<div ng-show="productItem.product_category.id">
+	{%verbatim%}
+			<h4>关键属性</h4>
+			<ul>
+				<li ng-repeat="prop in categoryProps |filter:keyProp">
+					<eav-field prop="prop"></eav-field>
+				</li>
+			</ul>
+			<hr>
+			<h4>非关键属性</h4>
+			<ul>
+				<li ng-repeat="prop in categoryProps |filter:normalProp">
+					<eav-field prop="prop"></eav-field>
+				</li>
+			</ul>
+			<hr>
+			<h4>销售属性</h4>
+			<sell-fields>
+			<ul>
+				<li ng-repeat="prop in categoryProps |filter:sellProp">
+					<sell-field prop="prop"></sell-field>
+				</li>
+			</ul>
+			</sell-fields>
+	{%endverbatim%}
+		</div>
+		<hr>
+		<div class="row-fluid wizard-actions">
+			{% block button %}
+			<button  class="btn btn-success btn-next" >
+				保存
+				<i class="icon-arrow-right icon-on-right"></i>
+			</button>
+			{% endblock %}
+		</div>
+	</div><!-- /widget-main -->
+</div><!-- /widget-body -->
+</form>
+
+{% endblock %}
+
+
+
+{% block script %}
+
+<script type="text/javascript">
+var categories = [
+{% for id, name in form.fields.product_category.choices %}
+		{name: "{{ name }}", id:"{{ id }}"},
+{% endfor %}
+];
+</script>
+
+
+ <script src="{{STATIC_URL}}js/product.js"></script>
+{% endblock %}
+
+
+{% block result %}
+
+{% endblock %}

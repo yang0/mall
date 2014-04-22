@@ -1,0 +1,15 @@
+{% if show %}
+
+
+{% if back %}<strong style="margin-right:15px;"><a href="{{ back.link }}">&lsaquo; {{ back.title }}</a>{% endif %}</strong>
+{% for choice in choices %}
+
+ {% if choice.link %}
+ <span style="margin-right:5px;">
+ 	<a href="{{ choice.link }}">{% endif %}{{ choice.title }}{% if choice.link %}</a>
+ </span>
+ {% endif %}
+{% endfor %}
+<br class="clear" />
+
+{% endif %}

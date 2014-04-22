@@ -1,0 +1,19 @@
+<div >
+  <div  ng-transclude></div>
+
+
+  <ul>
+  	<li ng-repeat="sku in skuArray">
+  		[<span  ng-repeat="(key, val) in sku">
+	  		<span  ng-repeat="(k, v) in val">
+	  			{{ v }}
+	  		</span>
+  		</span>]
+  		<span style="margin-left:100px;">
+  			库存：<input type="number"style="width:80px;">件
+  			价格：<input type="number" style="width:80px;">元
+  		</span>
+  	</li>
+  </ul>
+</div>
+

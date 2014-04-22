@@ -1,0 +1,92 @@
+<a class="menu-toggler" id="menu-toggler" href="#">
+	<span class="menu-text"></span>
+</a>
+
+<div class="sidebar" id="sidebar">
+		{% if user.is_authenticated and user.role_id == 1 %}
+		<ul class="nav nav-list">
+			<li>
+				<a href="/admin/">
+					<i class="icon-dashboard"></i>
+					<span class="menu-text">管理中心首页</span>
+				</a>
+			</li>
+			<li>
+				<a href="/admin/group/userprinter/">
+					<i class="icon-print"></i>
+					<span class="menu-text">打印机</span>
+				</a>
+			</li>
+			<li class="" id="user_join">
+				<a class="dropdown-toggle" href="#">
+					<i class="icon-group"></i>
+					<span class="menu-text"> 用户管理 </span>
+					<b class="arrow icon-angle-down"></b>
+				</a>
+
+				<ul class="submenu" style="display: none;">
+					<li>
+						<a href="/admin/auth/group/">
+							<i class="icon-double-angle-right"></i>
+							用户组
+						</a>
+					</li>
+					<li>
+						<a href="/admin/user/user/">
+							<i class="icon-double-angle-right"></i>
+							所有用户
+						</a>
+					</li>
+					<li>
+						<a href="/admin/partner/partner/">
+							<i class="icon-double-angle-right"></i>
+							运营商
+						</a>
+					</li>
+	
+				</ul>
+			</li>
+			<li class="" id="user_join">
+				<a class="dropdown-toggle" href="#">
+					<i class="icon-table"></i>
+					<span class="menu-text"> 基础数据 </span>
+					<b class="arrow icon-angle-down"></b>
+				</a>
+
+				<ul class="submenu" style="display: none;">
+					<li>
+						<a href="/admin/area/school/">
+							<i class="icon-double-angle-right"></i>
+							学校
+						</a>
+					</li>
+	
+				</ul>
+			</li>
+			<li>
+				<a href="#">
+					<i class=" icon-bar-chart"></i>
+					<span class="menu-text">数据统计</span>
+				</a>
+			</li>
+			<li>
+				<a href="{% url 'group_group_list' %}">
+					<i class="icon-comments-alt"></i>
+					<span class="menu-text">运营商的群</span>
+				</a>
+			</li>
+			<li>
+				<a href="{% url 'publish_index' %}">
+					<i class=" icon-external-link"></i>
+					<span class="menu-text">发布</span>
+				</a>
+			</li>
+			
+			
+		</ul><!--/.nav-list-->
+		<div class="sidebar-collapse" id="sidebar-collapse">
+		<i class="icon-double-angle-left"></i>
+		</div>
+		{% endif %}
+</div>
+

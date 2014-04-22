@@ -1,0 +1,49 @@
+<a class="menu-toggler" id="menu-toggler" href="#">
+	<span class="menu-text"></span>
+</a>
+
+<div class="sidebar" id="sidebar">
+		{% if user.is_authenticated and user.role_id == 4 %}
+		<ul class="nav nav-list">
+			<li class="active">
+				<a href="{% url 'group_dorm' %}">
+					<i class="icon-dashboard"></i>
+					<span class="menu-text" style="font-weight:bold;">校园运营中心 </span>
+				</a>
+			</li>
+	
+			<li>
+				<a href="{% url 'user_print_all' %}">
+					<i class="icon-user"></i>
+					<span class="menu-text">所有打印记录</span>
+				</a>
+			</li>
+
+			<li>
+				<a href="{% url 'group_group_user' %}">
+					<i class="icon-group"></i>
+					<span class="menu-text">我的高校</span>
+				</a>
+			</li>
+			<li>
+				<a href="/partner/form">
+					<i class="icon-pencil"></i>
+					<span class="menu-text">收费设置</span>
+				</a>
+			</li>
+			<li>
+				<a href="{% url 'card_center' %}">
+					<i class="icon-credit-card"></i>
+					<span class="menu-text">充值卡管理</span>
+				</a>
+			</li>
+
+		
+			
+		</ul><!--/.nav-list-->
+		<div class="sidebar-collapse" id="sidebar-collapse">
+		<i class="icon-double-angle-left"></i>
+		</div>
+		{% endif %}
+</div>
+

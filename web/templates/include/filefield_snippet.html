@@ -1,0 +1,97 @@
+{% load my_filter %}
+
+{% csrf_token %}
+<form id="fileupload" class="form-horizontal" method="post" action="/fileupload/new/" enctype="multipart/form-data">
+																{% for field in form %}
+{% if field.field.widget|klass == "HiddenInput" and field.field.widget.attrs.type == 'file' %}
+
+																
+
+<div class="form-group {%if field.errors%} error {%endif%}">
+	<label class="col-xs-12 col-sm-3 control-label no-padding-right" >{{field.label}}</label>
+
+	<div class="col-xs-12 col-sm-5">
+		<span class="{% if field.field.widget|klass == "FileInput" %} span12  {% else %} span8 {%endif%}  {%if field.errors%} input-icon input-icon-right {%endif%}">
+
+
+
+			<div class="row-fluid">
+				<div class="span6">
+					<span class="btn btn-site btn-xs fileinput-button">
+	                    <i class="icon-plus"></i>
+	                    <span>添加文件({% if field.field.widget.attrs.select == 'multiple' %}多选{%else%}单选{%endif%})</span>
+	                    <input type="file" name="file" field="{{field.name}}" {{field.field.widget.attrs.select}} >
+	                </span>
+
+				</div>
+
+
+			</div>
+
+			<table role="presentation" class="table table-striped" style="margin:2px"><tbody class="files">
+
+				{% if not field.errors and field.value %}
+
+				<tr class="template-download fade in">
+				        <td>
+				            <span class="preview">
+				                
+				                    <a href="{{ MEDIA_URL }}{{field.value}}" title="" download="" data-gallery=""><img src="{{ MEDIA_URL }}{{field.value}}"></a>
+				                
+				            </span>
+				        </td>
+				        <td>
+				            <p class="name">
+				                <a href="{{ MEDIA_URL }}{{field.value}}" title="" download="" data-gallery="">{{field.value|fileName}}</a>
+				            </p>
+				            
+				        </td>
+				        <td>
+				            <span class="size"></span>
+				        </td>
+				        <td>
+				            <button class="btn btn-danger delete" data-type="DELETE" data-url="/fileupload/delete/{{field.value}}">
+				                <i class="icon-trash"></i>
+				                <span>Delete</span>
+				            </button>
+				            <input type="checkbox" name="delete" value="1" class="toggle">
+				        </td>
+				    </tr>
+
+
+				{% endif %}
+
+
+
+
+			</tbody></table>
+
+
+
+
+
+
+			{%if field.errors%} <i class="icon-remove-sign"></i> {%endif%}
+
+		</span>
+		
+	</div>
+
+	<div class="help-block col-xs-12 col-sm-reset inline"> 
+			{% if field.errors %}
+				 {% for error in field.errors %}
+				 	{{ error }}
+				 {% endfor %} 
+			{% else %}
+				{{ field.help_text }}
+			{% endif %}
+		</div>
+</div>
+
+
+
+{% endif %}
+
+
+															    {% endfor %}
+</form>

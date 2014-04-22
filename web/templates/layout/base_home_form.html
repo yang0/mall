@@ -1,0 +1,116 @@
+{% extends "layout/base.html" %}
+
+
+
+{% block content %}
+
+
+<div class="main-content" ng-controller={{form.modelName}}Ctrl>
+
+
+					<div class="page-content">
+						<div class="page-header">
+							<h2>
+								{% block formHeader %}
+								添加新数据
+								{% endblock%}
+							</h2>
+							<span class="pull-right">
+								{% block link %}
+								
+								{% endblock%}
+							</span>
+						</div><!-- /.page-header -->
+
+						<div class="">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+
+
+								<div class="row-fluid">
+									<div class="span12">
+										<div class="widget-box">
+											<div class="widget-header widget-header-blue widget-header-flat">
+												<h4 class="lighter">带*为必填项</h4>
+
+
+
+
+											</div>
+
+
+											{% block form %}
+
+											<form class="form-horizontal" id="sample-form" action="" method="post" enctype="multipart/form-data">
+												{{ wizard.management_form }}
+
+											<div class="widget-body">
+												<div class="widget-main">
+
+													{%block wizard%}
+													{% endblock %}
+
+
+													<div class="step-content row-fluid position-relative" id="step-container">
+														<div class="step-pane active" id="step1">
+
+													{% block fields %}
+														{% include "include/form_snippet.html" %}
+													{% endblock %}
+															
+
+														</div>
+
+													</div>
+
+													<hr>
+													<div class="row-fluid wizard-actions">
+
+														{% block button %}
+														<button    class="btn btn-success btn-next" >
+															保存
+															<i class="icon-arrow-right icon-on-right"></i>
+														</button>
+														{% endblock %}
+													</div>
+
+
+												</div><!-- /widget-main -->
+
+
+											</div><!-- /widget-body -->
+											</form>
+
+											{% endblock %}
+											<p>
+											{% block result %}
+											{% endblock%}
+
+										</div>
+									</div>
+								</div>
+
+	
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div>
+
+
+ <script src="{{STATIC_URL}}lib/jquery/jquery.min.js"></script>
+ <script src="{{STATIC_URL}}lib/angular/angular.min.js"></script>
+  <script src="{{STATIC_URL}}lib/angular-resource/angular-resource.min.js"></script>
+  <script src="{{STATIC_URL}}lib/angular-route/angular-route.min.js"></script>
+  <script src="{{STATIC_URL}}lib/angular-sanitize/angular-sanitize.js"></script>
+  <script src="{{STATIC_URL}}lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  
+  <script src="{{STATIC_URL}}js/common/services.js"></script>
+  <script src="{{STATIC_URL}}js/common/directives.js"></script>
+{% block script %}								
+{% endblock%}
+
+
+
+
+{% endblock %}

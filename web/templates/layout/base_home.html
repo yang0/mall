@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <meta charset="utf-8" />
+        <title>mall</title>
+
+        <meta name="description" content="淘宝商城系统" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!--basic styles-->
+
+        <link href="{{STATIC_URL}}lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="{{STATIC_URL}}assets/css/bootstrap-responsive.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="{{STATIC_URL}}lib/font-awesome/css/font-awesome.min.css" />
+        
+
+        <!--[if IE 7]>
+          <link rel="stylesheet" href="{{STATIC_URL}}assets/css/font-awesome-ie7.min.css" />
+        <![endif]-->
+
+        <!--page specific plugin styles-->
+
+        <!--fonts-->
+
+        <link rel="stylesheet" href="{{STATIC_URL}}css/font-css.css" type="text/css" />
+
+        <!--ace styles-->
+
+        <link rel="stylesheet" href="{{STATIC_URL}}assets/css/ace.min.css" />
+        <link rel="stylesheet" href="{{STATIC_URL}}assets/css/ace-responsive.min.css" />
+        <link rel="stylesheet" href="{{STATIC_URL}}assets/css/ace-skins.min.css" />
+        <link rel="stylesheet" href="{{STATIC_URL}}css/mall.css" type="text/css" />
+
+        <!--[if lte IE 8]>
+          <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+        <![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body >
+
+    {% block header %}{% include "layout/header_home.html" %}{% endblock %}
+    <div class="main-container container-fluid">
+        {% block content %}{% endblock %}
+    </div>
+    <div class="clearfix"></div>
+    {% block footer %}{% include "layout/footer_home.html" %}{% endblock %}
+</body>
+</html>
+
+
+

@@ -1,0 +1,38 @@
+{% extends "layout/base_home_form.html" %}
+
+
+{% block formHeader %}
+添加新商品
+<span ></span>
+{% endblock %}
+
+
+
+{%block wizard%}
+	<div id="fuelux-wizard" class="row-fluid" data-target="#step-container">
+		<ul class="wizard-steps">
+			<li data-target="#step1" class="">
+				<span class="step">1</span>
+				<span class="title">选择商品分类</span>
+			</li>
+
+			<li data-target="#step2" class="">
+				<span class="step">2</span>
+				<span class="title">添加商品</span>
+			</li>
+		</ul>
+	</div>
+{% endblock %}
+
+
+{% block script %}
+<script type="text/javascript">
+function productItemCtrl($scope) {
+}
+</script>
+{% endblock %}
+
+
+{% block result %}
+
+{% endblock %}

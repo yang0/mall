@@ -1,0 +1,9 @@
+
+	<label class="control-label">{{ prop.name }}：</label>
+	<span class="controls">
+		<label class="checkbox inline" ng-repeat="v in eavEnumGroup.eavEnumValues" style="margin-left:10px;">
+		  <input type="checkbox" ng-model="eavEnumVals[prop.id][v.id]" 
+		  value="{{ v.id }}" ng-change="selectVal()" ng-true-value="{{v.value}}" ng-false-value="false"> {{ v.value }}
+
+		</label>
+	</span>

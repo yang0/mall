@@ -1,0 +1,123 @@
+{% extends "layout/base.html" %}
+
+
+
+{% block content %}
+
+
+<div class="main-content" ng-controller={{form.modelName}}Ctrl>
+
+
+					<div class="page-content">
+						<div class="page-header">
+							<h2>
+								添加商品
+							</h2>
+						</div><!-- /.page-header -->
+
+						<div class="">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+
+
+								<div class="row-fluid">
+									<div class="span12">
+										<div class="widget-box">
+											<div class="widget-header widget-header-blue widget-header-flat">
+												<h4 class="lighter">带*为必填项</h4>
+
+
+
+
+											</div>
+
+
+											{% block form %}
+
+											<form class="form-horizontal" id="sample-form" action="" method="post" enctype="multipart/form-data">
+											<input type="hidden" ng-model="productitemform_wi.product_category" ng-init="{{categoryId}}">
+
+											<div class="widget-body">
+												<div class="widget-main">
+
+													{%block wizard%}
+														<div id="fuelux-wizard" class="row-fluid" data-target="#step-container">
+															<ul class="wizard-steps">
+																<li data-target="#step1" class="complete">
+																	<span class="step">1</span>
+																	<span class="title">选择商品分类</span>
+																</li>
+
+																<li data-target="#step2" class="">
+																	<span class="step">2</span>
+																	<span class="title">添加商品</span>
+																</li>
+															</ul>
+														</div>
+													{% endblock %}
+
+
+													<div class="step-content row-fluid position-relative" id="step-container">
+														<div class="step-pane active" id="step1">
+
+													{% block fields %}
+														{% include "include/form_snippet.html" %}
+													{% endblock %}
+															
+
+														</div>
+
+													</div>
+
+													<hr>
+													<div class="row-fluid wizard-actions">
+
+
+														<button onClick="submit();"    class="btn btn-success btn-next" >
+															保存
+															<i class="icon-arrow-right icon-on-right"></i>
+														</button>
+													</div>
+
+
+												</div><!-- /widget-main -->
+
+
+											</div><!-- /widget-body -->
+											</form>
+
+											{% endblock %}
+											<p>
+											{% block result %}
+											{% endblock%}
+
+										</div>
+									</div>
+								</div>
+
+	
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div>
+
+
+
+ <script src="{{STATIC_URL}}lib/angular/angular.js"></script>
+  <script src="{{STATIC_URL}}lib/angular/angular-resource.js"></script>
+  <script src="{{STATIC_URL}}lib/angular/angular-route.js"></script>
+  <script src="{{STATIC_URL}}lib/angular/angular-sanitize.js"></script>
+  <script src="{{STATIC_URL}}js/common/services.js"></script>
+{% block script %}								
+{% endblock%}
+
+
+
+
+{% endblock %}
+
+
+
+
+

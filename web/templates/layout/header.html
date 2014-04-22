@@ -1,0 +1,56 @@
+<div class="navbar" style="background-color:#2684c2">
+	<div class="navbar-container">
+		<div class="container-fluid">
+			<div class="navbar-header pull-left">
+			<a href="{% url 'index' %}" class="navbar-brand" style="padding-top:6px;padding-bottom:6px;">
+				<img src="{{STATIC_URL}}images/yunque_logo.png" class="logo"/>
+			</a><!--/.brand-->
+			</div>
+
+
+
+			{% if user.is_authenticated %}
+			<ul class="nav ace-nav pull-right">
+				<li class="light-blue" >
+					<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+						<!--
+						{% if request.user.avatar %}
+						<img class="nav-user-photo" src="{{ MEDIA_URL }}" alt="{{ request.user.nick }}">
+						{% else %}
+						 <img class="nav-user-photo" src="{{ STATIC_URL }}images/snap_50X50_default_head.jpg">
+						{% endif %}
+						-->
+						{{user.nick}}
+						<i class="icon-caret-down"></i>
+					</a>
+
+					<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-closer">
+						
+						
+
+						<li>
+							<a href="/logout">
+								<i class="icon-off"></i>
+								退出
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul><!--/.ace-nav-->
+			{% endif %}
+
+			<ul class="nav ace-nav pull-right">
+			
+				<li style="background-color:#2684c2;">
+					<a href="" style="background-color:#2684c2;">
+						<i class="icon-comments-alt"></i>
+						<span class="menu-text">论坛</span>
+					</a>
+				</li>
+				
+			</ul>
+
+
+		</div><!--/.container-fluid-->
+	</div><!--/.navbar-inner-->
+</div>
